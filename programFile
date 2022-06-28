@@ -1,0 +1,20 @@
+//Program to generate random password
+
+
+#include <iostream>
+#include<cstdlib>
+#include<ctime>
+
+using namespace std;
+static const char alphanum[]="12456789" "!@#$%^&*" "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "abcdefghijklmnopqrstuvwxyz";
+int size=sizeof(alphanum)-1;
+
+int main()
+{
+   int length = 8; //Password length
+   srand(time(0));   // Using current time as seed for random generator
+   for(int i=0; i<length; i++){
+       cout<<alphanum[rand() % ::size];
+   }
+   return 0;
+}
